@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<link href="casto.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+
+    <div class="full-screen-container">
+
+      <img src="images/plan_casto2.jpg" alt="Map Castorama" class="full-screen-image">
+
+   
+      <div class="relative" style="width: 100%; height: 100%;">
+  
+        <img @mouseenter="open1 = true" @mouseleave="open1 = false" src="images/castorama.jpg" alt="Logo" class="point" style="width: 1.5%; height: 3%; top: 50.2%; left: 38.42%; border-radius: 50%;">
+        <transition name="slide-up">
+          <div v-if="open1" class="info-box" style="top: 52%; left: 40%;">
+            <img src="images/casto.jpg" alt="Image exemple" class="taille">
+            <h1 class="text-center">Allée N°2</h1>
+            <p class="text-center">Cette allée correspond à la partie bricolage / outillages pour prendre soin de votre jardin en bonne et due forme !</p>
+          </div>
+        </transition>
+
+
+        <img @mouseenter="open2 = true" @mouseleave="open2 = false" src="images/castorama.jpg" alt="Logo" class="point" style="width: 1.5%; height: 3%; top: 50.2%; left: 40.53%; border-radius: 50%;">
+        <transition name="slide-up">
+          <div v-if="open2" class="info-box" style="top: 52%; left: 42%;">
+            <img src="images/casto.jpg" alt="Image exemple" class="taille">
+            <h1 class="text-center">Allée N°3</h1>
+            <p class="text-center">Description de l'allée 3.</p>
+          </div>
+        </transition>
+
+        <img @mouseenter="open3 = true" @mouseleave="open3 = false" src="images/castorama.jpg" alt="Logo" class="point" style="width: 1.5%; height: 3%; top: 50.2%; left: 42.65%; border-radius: 50%;">
+        <transition name="slide-up">
+          <div v-if="open3" class="info-box" style="top: 52%; left: 44%;">
+            <img src="images/casto.jpg" alt="Image exemple" class="taille">
+            <h1 class="text-center">Allée N°4</h1>
+            <p class="text-center">Description de l'allée 4.</p>
+          </div>
+        </transition>
+
+  
+        <img @mouseenter="open4 = true" @mouseleave="open4 = false" src="images/castorama.jpg" alt="Logo" class="point" style="width: 1.5%; height: 3%; top: 50.2%; left: 45.1%; border-radius: 50%;">
+        <transition name="slide-up">
+          <div v-if="open4" class="info-box" style="top: 52%; left: 46.5%;">
+            <img src="images/casto.jpg" alt="Image exemple" class="taille">
+            <h1 class="text-center">Allée N°5</h1>
+            <p class="text-center">Description de l'allée 5.</p>
+          </div>
+        </transition>
+
+      
+        <img @mouseenter="open5 = true" @mouseleave="open5 = false" src="images/castorama.jpg" alt="Logo" class="point" style="width: 1.5%; height: 3%; top: 50.2%; left: calc(35.28% + 0.5vw); border-radius: 50%;">
+        <transition name="slide-up">
+          <div v-if="open5" class="info-box" style="top: 52%; left: 37.5%;">
+            <img src="images/casto.jpg" alt="Image exemple" class="taille">
+            <h1 class="text-center">Allée N°1</h1>
+            <p class="text-center">Description de l'allée 1.</p>
+          </div>
+        </transition>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  new Vue({
+    el: '#app',
+    data() {
+      return {
+        open1: false,
+        open2: false,
+        open3: false,
+        open4: false,
+        open5: false,
+      };
+    },
+  });
+  </script>
+</body>
+</html>
